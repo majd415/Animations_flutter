@@ -2,6 +2,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import 'homePage.dart';
+
 class AnimationsScreen extends StatelessWidget {
 
   @override
@@ -34,7 +36,9 @@ class AnimationsScreen extends StatelessWidget {
             Expanded(
               child: Container(
                 child: TextButton(
-                  onPressed: () {  },
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  },
                   child:Lottie.asset("assets/start.json",height: 200,width: 200) ,),
               ),
             )
